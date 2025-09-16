@@ -37,3 +37,14 @@
     transition: width 0.3s ease;
     color: var(--link-hover);
 }
+
+.lesson-header {
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    background-color: rgba(250, 250, 250, 0.2);
+    box-shadow: 5px 5px 31px -5px rgba(34, 60, 80, 0.6);
+}
+
+.to-back {
+    cursor: pointer;
+}
