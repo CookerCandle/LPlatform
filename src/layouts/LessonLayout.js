@@ -1,14 +1,31 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom"
+import { MdNavigateBefore } from "react-icons/md";
+
+import ThemeToggle from "../components/ThemeTogle";
+
 
 export default function LessonLayout() {
+    const navigate = useNavigate();
     return(
-        <div className="mt-5">
-            <header className="alert alert-danger">s</header>
-            <main className="alert alert-danger">
-                <Outlet />
-            </main>
-            <footer className="alert alert-danger">s</footer>
-        </div>
+        <>
+            <header className="alert lesson-header p-4 ">
+                <div className="d-flex justify-content-between ">
+                    <div>
+                        <h1 id="logo">
+                            <MdNavigateBefore size={30} onClick={() => navigate("/Learning")} className="to-back"/>
+                            <span>L</span>platform
+                        </h1>
+                    </div>
+                    <ThemeToggle />
+                </div>
+            </header>
+            <div className="mt-5">
+                <main className="alert alert-warning">
+                    <Outlet />
+                </main>
+            </div>
+            <footer className="alert alert-success">s</footer>
+        </>
     );
 }
