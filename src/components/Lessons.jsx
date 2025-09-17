@@ -16,7 +16,7 @@ const Lessons = () => {
             <h2>Список уроков</h2>
             <ul className='list-group'>
                 {lessons.map(item => (
-                    <li key={item.lesson} className="list-group-item d-flex align-items-center mt-3 li-lesson" onClick={() => navigate(`${item.url}`, {state: item})}>
+                    <li key={item.lesson} className="list-group-item d-flex align-items-center mt-3 li-lesson" onClick={() => navigate(`${item.url}`)}>
                         <MdPlayLesson size={24} className="me-2" />
                         <div>
                             <strong>{item.name}</strong>
