@@ -21,11 +21,10 @@ export default function LessonLayout() {
                 </div>
             </header>
             <div className="mt-5">
-                <main className="alert alert-warning">
+                <main className="container">
                     <Outlet />
                 </main>
             </div>
-            <footer className="alert alert-success">s</footer>
         </>
     );
 }
