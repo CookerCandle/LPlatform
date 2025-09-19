@@ -27,7 +27,7 @@ function Lesson() {
             <h2>{lesson.name}</h2>
             <ul className="list-group">
                 {lesson.units.map((unit, index) => (
-                    <li key={index} className="list-group-item d-flex align-items-center mt-3 li-lesson"  onClick={() => navigate(`unit?q=${index}`)}>
+                    <li key={index} className={`list-group-item d-flex align-items-center mt-3 li-lesson ${unit.passed ? 'passed' : ""}`}  onClick={() => navigate(`unit?q=${index}`)}>
                         <Unit unit={unit} />
                     </li>
                 ))}
