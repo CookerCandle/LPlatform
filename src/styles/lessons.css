@@ -14,3 +14,10 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease; 
 }
 
+.passed {
+  background-color: rgba(250, 250, 250, 0.416);
+  color: green !important;
+  cursor: default !important;
+  pointer-events: none;
+  opacity: 0.8;
+}
