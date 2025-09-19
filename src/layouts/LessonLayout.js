@@ -13,7 +13,7 @@ export default function LessonLayout() {
                 <div className="d-flex justify-content-between ">
                     <div>
                         <h1 id="logo">
-                            <MdNavigateBefore size={30} onClick={() => navigate("/Learning")} className="to-back"/>
+                            <MdNavigateBefore size={30} onClick={() => navigate(-1)} className="to-back"/>
                             <span>L</span>platform
                         </h1>
                     </div>
