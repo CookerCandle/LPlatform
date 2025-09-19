@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import LessonLayout from './layouts/LessonLayout';
 
+import { getLessonsData } from './utils/lessonsStorage';
+
 import HomePage from './pages/HomePage';
 import NotFound from './pages/NotFound';
 import Learning from './pages/Learning';
@@ -13,6 +15,10 @@ import Lesson from './pages/Lesson';
 import Task from './pages/Task';
 
 class App extends React.Component {
+  componentDidMount() {
+    getLessonsData();
+  }
+
   render() {
     return (
       <Routes>
