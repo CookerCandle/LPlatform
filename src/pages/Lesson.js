@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import lessonsData from "../data/lessonsData";
+import { getLessonsData } from "../utils/lessonsStorage";
 import Unit from "../components/Unit";
 
 function Lesson() {
     const navigate = useNavigate();
     const { param } = useParams();
-    const [lessons] = useState(lessonsData);
+    const [lessons, setLessons] = useState(null);
+
+    useEffect(() => {
+        const data = getLessonsData();
+        setLessons(data);
+    }, []);
+    
+    if (!lessons) return <p>Загрузка...</p>;
     const lesson = lessons[param];
 
     if (!lesson) {
