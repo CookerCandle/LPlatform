@@ -1,12 +1,16 @@
 // src/data/lessonsData.js
 const lessonsData = {
   mathematic: {
+    lesson: 1,
+    name: "Математика",
+    title: "Высшая математика",
+    url: "mathematic",
     passed: false,
     units: [
       { 
         unit: 1, 
         isTest: false, 
-        video: "https://www.youtube.com/embed/5MgBikgcWnY",
+        video: "/videos/testVideo.mp4",
         description: "Введение в математику", 
         passed: false 
       },
@@ -25,6 +29,10 @@ const lessonsData = {
     ]
   },
   programming: {
+    lesson: 2,
+    name: "Программирование",
+    title: "Программирование на языке C++",
+    url: "programming",
     passed: false,
     units: [
       {
@@ -49,6 +57,10 @@ const lessonsData = {
     ]
   },
   alchemy: {
+    lesson: 3,
+    name: "Химия",
+    title: "Химия рективных элементов",
+    url: "alchemy",
     passed: false,
     units: [
       {
