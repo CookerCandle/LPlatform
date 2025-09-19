@@ -10,6 +10,7 @@ import Learning from './pages/Learning';
 import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Lesson from './pages/Lesson';
+import Task from './pages/Task';
 
 class App extends React.Component {
   render() {
@@ -28,6 +29,7 @@ class App extends React.Component {
         {/* Под страницы */}
         <Route element={<LessonLayout />} >
           <Route path="Learning/:param" element={<Lesson />} />
+          <Route path="Learning/:param/unit" element={<Task />} />
         </Route>
 
         {/* 404 */}
