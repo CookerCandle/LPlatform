@@ -38,7 +38,7 @@ const lessonsData = {
       {
         unit: 1,
         isTest: false,
-        video: "https://www.youtube.com/embed/5MgBikgcWnY",
+        video: "/videos/testVideo.mp4",
         description: "Введение в программирование",
         passed: false
       },
@@ -66,7 +66,7 @@ const lessonsData = {
       {
         unit: 1,
         isTest: false,
-        video: "https://www.youtube.com/embed/5MgBikgcWnY",
+        video: "/videos/testVideo.mp4",
         description: "Введение в алхимию",
         passed: false
       },
