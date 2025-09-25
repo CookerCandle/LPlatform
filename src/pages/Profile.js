@@ -1,10 +1,12 @@
 import React from "react";
+import StudentProfile from "../components/StudentProfile";
 
 class Profile extends React.Component {
     render() {
         return(
             <div>
-                <h1>Profile</h1>
+                <h2>Профиль Студента</h2>
+                <StudentProfile />
             </div>
         )
     }
