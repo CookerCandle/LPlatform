@@ -27,3 +27,11 @@ body {
 .active {
     color: var(--active-link);
 }
+
+.text {
+    color: var(--text-color);
+}
+
+.liquid-mirror {
+  background-color: rgba(250, 250, 250, 0.416);
+}
