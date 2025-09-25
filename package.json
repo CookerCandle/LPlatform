@@ -2,6 +2,7 @@
   "name": "lplatform",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://CookerCandle.github.io/LPlatform",
   "dependencies": {
     "bootstrap": "^5.3.8",
     "gh-pages": "^6.3.0",
