@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/LPlatform/static/css/main.45c4a262.css",
+    "main.js": "/LPlatform/static/js/main.05ed9298.js",
+    "index.html": "/LPlatform/index.html",
+    "main.45c4a262.css.map": "/LPlatform/static/css/main.45c4a262.css.map",
+    "main.05ed9298.js.map": "/LPlatform/static/js/main.05ed9298.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45c4a262.css",
+    "static/js/main.05ed9298.js"
+  ]
+}
