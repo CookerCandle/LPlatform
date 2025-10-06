@@ -1,73 +1,62 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import newsData from "../data/newsData";
 
 const News = () => {
-  const newsData = [
-    {
-      id: 1,
-      title: "Первая новость",
-      description: "Краткое описание первой новости. Здесь может быть текст анонса.",
-      image: "./images/news1.jpg"
-    },
-    {
-      id: 2,
-      title: "Вторая новость",
-      description: "Описание второй новости. Текст анонса или вступление.",
-      image: "./images/news2.jpg"
-    },
-    {
-      id: 3,
-      title: "Третья новость",
-      description: "Описание третьей новости. Здесь тоже краткий текст.",
-      image: "./images/news3.jpg"
-    },
-  ];
-
+  const newsItems = newsData;
   return (
-    <div className="container d-flex justify-content-center mt-5">
-      <div
-        id="newsCarousel"
-        className="carousel slide w-50"
-        data-bs-ride="carousel"
-      >
+    <div style={{ background: "var(--blocks-bg)" }}>
+      <div id="newsCarousel" className="carousel slide" data-bs-ride="carousel">
+        <div className="carousel-indicators">
+          {newsItems.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              data-bs-target="#newsCarousel"
+              data-bs-slide-to={index}
+              className={index === 0 ? "active" : ""}
+              aria-current={index === 0 ? "true" : "false"}
+              aria-label={`Slide ${index + 1}`}
+            ></button>
+          ))}
+        </div>
+
         <div className="carousel-inner">
-          {newsData.map((news, index) => (
+          {newsItems.map((item, index) => (
             <div
-              key={news.id}
+              key={index}
               className={`carousel-item ${index === 0 ? "active" : ""}`}
             >
               <img
-                src={news.image}
-                className="d-block mx-auto rounded w-75"
-                style={{ maxHeight: "350px", objectFit: "cover" }}
-                alt={news.title}
+                src={item.image}
+                className="d-block w-100"
+                alt={item.title}
+                style={{ height: "400px", objectFit: "cover" }}
               />
-              {/* описание под картинкой */}
-              <div className="text-center mt-3 text">
-                <h5>{news.title}</h5>
-                <p className="mb-0">{news.description}</p>
+              <div className="carousel-caption d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5>{item.title}</h5>
+                <p>{item.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Кнопки навигации */}
         <button
           className="carousel-control-prev"
           type="button"
           data-bs-target="#newsCarousel"
           data-bs-slide="prev"
         >
-          {/* <span className="carousel-control-prev-icon"></span>
-          <span className="visually-hidden">Предыдущая</span> */}
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
         </button>
+
         <button
           className="carousel-control-next"
           type="button"
           data-bs-target="#newsCarousel"
           data-bs-slide="next"
         >
-          {/* <span className="carousel-control-next-icon"></span>
-          <span className="visually-hidden">Следующая</span> */}
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
         </button>
       </div>
     </div>

@@ -1,5 +1,4 @@
-/* Кнопка переключателя */
-.toggle-theme {
+.theme-toggle {
     background: none;
     border: solid 1px #fff;
     cursor: pointer;
@@ -7,17 +6,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 18px;
+    padding: 10px;
 }
 
-.theme-button {
+.theme-btn {
     font-size:larger;
     color: var(--text-color);
     border-color: var(--text-color);
     border-radius: 8px;
 }
 
-.theme-button:hover {
-    transition: width 0.3s ease;
-    background-color: var(--link-hover);
+.theme-btn:hover {
+    background-color: var(--bg-color);
+    transition: background 0.3s, color 0.3s;
 }

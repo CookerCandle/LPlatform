@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap');
+
+:root[data-theme="light"] {
+    --blocks-bg: #d5e5fa;
+    --bg-color: #f9fafb;
+    --text-color: #000;
+    --nav-btn: #0d6efd;
+}
+
+:root[data-theme="dark"] {
+    --blocks-bg: #1F2937;
+    --bg-color: #111827;
+    --text-color: #fff;
+    --nav-btn: #0d6efd;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
