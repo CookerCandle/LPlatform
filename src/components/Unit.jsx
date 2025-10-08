@@ -26,6 +26,7 @@ const Unit = ({ lesson }) => {
                 </div>
             </div>
 
+            <div className="lessons">
             {lesson.units.map((unit, index) =>(
                 <div key={index} className=" lesson-block card mt-3 border-light">
                     <div className="card-body d-flex align-items-center justify-content-between">
@@ -46,6 +47,7 @@ const Unit = ({ lesson }) => {
                     </div>
                 </div>
             ))}
+            </div>
         </>
     );
 };
