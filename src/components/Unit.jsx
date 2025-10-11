@@ -1,8 +1,10 @@
 import { calculateProgress } from "../utils/progress";
 import { FaCheckCircle, FaRegPlayCircle } from "react-icons/fa";
 import { FaRegFileLines } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Unit = ({ lesson }) => {
+    const navigate = useNavigate();
     const progress = calculateProgress(lesson);
     return(
         <>
@@ -28,7 +30,9 @@ const Unit = ({ lesson }) => {
 
             <div className="lessons">
             {lesson.units.map((unit, index) =>(
-                <div key={index} className=" lesson-block card mt-3 border-light">
+                <div key={index} 
+                    className="lesson-block card mt-3 border-light"
+                    onClick={() => navigate(`unit?q=${index}`)}>
                     <div className="card-body d-flex align-items-center justify-content-between">
                         <div className="d-flex align-items-center gap-3"> 
                             <div className="rounded-circle">
