@@ -4,21 +4,21 @@ const lessonsData = {
     name: "Математика",
     title: "Высшая математика",
     url: "mathematic",
-    passed: true,
+    passed: false,
     units: [
-      { 
-        unit: 1, 
-        isTest: false, 
+      {
+        unit: 1,
+        isTest: false,
         video: "/videos/test.mp4",
-        description: "Введение в математику", 
-        passed: true 
+        description: "Введение в математику",
+        passed: false
       },
       {
         unit: 2,
         isTest: true,
         video: null,
         description: "Тест по введению в математику",
-        passed: true,
+        passed: false,
         questions: [
           { question: "2 + 2 = ?", options: [3, 4, 5, 2], answer: 4 },
           { question: "2 * 2 = ?", options: [4, 3, 5, 2], answer: 4 },
@@ -69,7 +69,7 @@ const lessonsData = {
         isTest: true,
         video: null,
         description: "Тест по введению в программировании",
-        passed: true,
+        passed: false,
         questions: [
           { question: "Что такое переменная?", options: ["Место в памяти", "Функция", "Цикл", "Условие"], answer: "Место в памяти" },
           { question: "Тип данных хранящий число", options: ["int", "string", "bool", "char"], answer: "int" },
@@ -139,11 +139,11 @@ const lessonsData = {
     passed: false,
     units: [
       { unit: 1, isTest: false, video: "", description: "Хирагана и Катакана", passed: false },
-      { 
-        unit: 2, 
-        isTest: true, 
-        video: null, 
-        description: "Тест по азбукам", 
+      {
+        unit: 2,
+        isTest: true,
+        video: null,
+        description: "Тест по азбукам",
         passed: false,
         questions: [
           { question: "Какая азбука используется для заимствованных слов?", options: ["Хирагана", "Катакана", "Кандзи", "Ромадзи"], answer: "Катакана" },
@@ -163,7 +163,7 @@ const lessonsData = {
     url: "english",
     passed: false,
     units: [
-      { unit: 1, isTest: false, video: "", description: "Алфавит и произношение", passed: true },
+      { unit: 1, isTest: false, video: "", description: "Алфавит и произношение", passed: false },
       { unit: 2, isTest: false, video: "", description: "Основы грамматики", passed: false },
       {
         unit: 3,
