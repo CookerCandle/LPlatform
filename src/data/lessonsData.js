@@ -9,7 +9,7 @@ const lessonsData = {
       { 
         unit: 1, 
         isTest: false, 
-        video: "",
+        video: "/videos/test.mp4",
         description: "Введение в математику", 
         passed: true 
       },
