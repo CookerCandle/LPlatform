@@ -10,6 +10,7 @@ import './styles/learning.css';
 import './styles/mainLayout.css';
 import './styles/theme.css'
 import './styles/index.css';
+import './styles/player.css';
 
 createRoot(document.getElementById('root')).render(
   <HashRouter>
