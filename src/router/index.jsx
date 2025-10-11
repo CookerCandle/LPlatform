@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Profile from "../pages/Profile";
 import Learning from "../pages/Learning";
 import Units from "../pages/Units";
+import TestingPage from "../pages/TestingPage";
 import SecondLayout from "../layouts/SecondLayout";
 
 const AppRouter = () => {
@@ -27,6 +28,7 @@ const AppRouter = () => {
             {/* second pages */}
             <Route element={<SecondLayout />}>
                 <Route path="/Learning/:lesson" element={<Units />} />
+                <Route path="/Learning/:lesson/unit" element={<TestingPage />} />
             </Route>
 
             {/* 404 */}
